@@ -1,0 +1,46 @@
+.content {
+    display: grid;
+    grid-template-columns: 60% 40%; /* Coluna central, tem que dar 100% a soma*/
+    grid-template-rows: 11.4rem 1fr; /* 11.4rem uma linha = header; 1fr é o restante do espaço*/
+
+    grid-template-areas:
+    'header header' /* dois header acima da tela dividido em 2*/
+    'left right'    /* imagem a esquerda e input botton a direita*/
+}
+
+header {
+    grid-area: header;
+}
+
+#bg {
+    grid-area: left;
+
+    background: url('/assets/home-bg-img.svg') no-repeat top/contain; /*no-repeat = para a imagem não se repetir   top/contain = imagem se ajusta ao lugar onde ela esta*/
+}
+
+main {
+    grid-area: right;
+    display: flex;
+    align-items: center; /* coloca todos os itens no centro*/
+}
+
+main .container {
+    width: min(36.3rem 100%); /* min = independete do tamanho da tela ele vai se ajustar. rem = numero de pix divido por 10*/
+}
+
+main h2 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--black);
+    font-size: clamp (20px, 5vw, 2.8rem);
+    margin-bottom: 2.4rem;
+}
+
+input {
+    border: .2rem solid var(--grey-blue);
+    padding: 0 1.6rem;
+}
+
+input, button, .button {
+    width: 100%;
+    margin-bottom: 1.8rem;
+}
