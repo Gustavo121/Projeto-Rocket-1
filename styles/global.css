@@ -99,6 +99,22 @@ button.outlined,
     border: .2rem solid var(--blue);
 }
 
+button.red,
+.button.red {
+    background: var(--red);  /* cor do fundo do botão*/
+    color: var(--white);     /*cor da letra do botão*/
+}
+
+button.grey,
+.button.grey{
+    background: var(--grey-light);
+    color: var(--grey-dark)
+}
+
+
+
+/* Header */
+
 .content header {
     width: 80%;
     margin: 3.5rem auto;
