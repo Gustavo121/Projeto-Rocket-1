@@ -1,0 +1,24 @@
+{
+  "name": "roketq",
+  "version": "1.0.0",
+  "description": "Projeto desenvolvido para gerenciar perguntas anonimas de usuarios direcionado ao dono da página. Projeto desenvolvido na semana NLW Rocoketseat na missão discover",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gustavo121/Projeto-Rocket-1.git"
+  },
+  "keywords": [],
+  "author": "Gustavo Gouvêa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gustavo121/Projeto-Rocket-1/issues"
+  },
+  "homepage": "https://github.com/Gustavo121/Projeto-Rocket-1#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.2"
+  }
+}

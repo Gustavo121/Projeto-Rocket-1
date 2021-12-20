@@ -1,0 +1,97 @@
+.content {
+    display: grid;
+    grid-template-columns: 60% 40%; /* Coluna central, tem que dar 100% a soma*/
+    grid-template-rows: 11.4rem 1fr; /* 11.4rem uma linha = header; 1fr é o restante do espaço*/
+
+    grid-template-areas:
+    'header header' /* dois header acima da tela dividido em 2*/
+    'left right'    /* imagem a esquerda e input botton a direita*/
+}
+
+header {
+    grid-area: header;
+}
+
+#bg {
+    grid-area: left;
+
+    background: url('/assets/home-bg-img.svg') no-repeat top/contain; /*no-repeat = para a imagem não se repetir   top/contain = imagem se ajusta ao lugar onde ela esta*/
+    background-position-x: -10rem; /* x-horizontal  y-vertical*/
+}
+
+main {
+    grid-area: right;
+
+    display: flex;
+    align-items: center; /* coloca todos os itens no centro*/
+    margin-top: -12rem;
+}
+
+main .container {
+    width: min(36.3rem, 100%); /* min = independete do tamanho da tela ele vai se ajustar. rem = numero de pix divido por 10*/
+}
+
+main h2 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--black);
+    font-size: clamp (20px, 5vw, 2.8rem);
+    margin-bottom: 2.4rem;
+}
+
+input {
+    border: .2rem solid var(--grey-blue);
+    padding: 0 1.6rem;
+    outline: none;
+}
+
+input, button, .button {
+    width: 100%;
+    margin-bottom: 1.8rem;
+}
+
+/* Separator Line */
+.separator {
+    display: flex; /* coloca o ou entre as linhas */
+    align-items: center; /* alinha o ou entre linhas */
+
+    margin: 4rem 0;
+}
+
+.separator div:nth-child(2) {
+    color: var(--grey-blue);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    padding: 0 1.35rem;
+    line-height: 0;
+}
+
+.separator div:nth-child(1), /* nth-child - deixa você manipular divs filhas*/
+.separator div:nth-child(3) {
+    background: var(--grey-blue);
+    width: 100%; /* Ocupação da linha*/
+    height: 1px; /* Altura da linha*/
+}
+
+/* create balls*/
+
+.ball {
+    width: 21.2rem;
+    height: 21.2rem;
+    background: var(--blue);
+    clip-path: circle();
+    opacity: 0.1;
+
+    position: fixed;
+}
+
+.ball.top{
+    top: -46rem;
+    width: 63.3rem;
+    right: -35rem;
+    height: 63.3rem;
+}
+
+.ball.bottom {
+    bottom: -15rem;
+    right: 5.6rem;
+}
